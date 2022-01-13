@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Discussion Page</title>
+</head>
+<link rel="stylesheet" href="CSS/css.css">
+<body>
+	<h1>Start a new discussion</h1>
+	<form method="post" action="/AddNewDiscussion)" th:object="${discussion}">
+		<label>Name</label> <input type="text" th:field="*{name}"><br>
+		<label>Date</label> <input type="text" th:field="*{datee}"><br>
+		<label>Thread</label> <input type="text" th:field="*{thread}"><br><br>
+		<input type="submit" value="Submit" />
+	</form>
+	<p>
+		<a th:href="@{/discussions}">See Discussions</a>
+		<br><br> <a th:href="@{/home}">Back
+			to home page</a>
+	</p>
+</body>
+</html>

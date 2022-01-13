@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Discussions</title>
+</head>
+<link rel="stylesheet" href="CSS/css.css">
+<body>
+	<h1>View Discussions</h1>
+	<table>
+		<tr>
+			<th>Employee Name</th>
+			<th>Date</th>
+			<th>Thread</th>
+		</tr>
+		<tr th:each="d:${discussions}" th:object="${d}">
+			<td th:text="*{name}"></td>
+			<td th:text="*{datee}"></td>
+			<td th:text="*{thread}"></td>
+
+		</tr>
+	</table>
+	<a th:href="@{/NewDiscussion}">Add another thread</a>
+	<a th:href="@{/home}">Home Page</a>
+</body>
+</html>

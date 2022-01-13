@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<link rel="stylesheet" href="CSS/css.css">
+<h1>Home Page</h1>
+	<div th:fragment="logout" class="logout" style="background-color: white;"
+		sec:authorize="isAuthenticated()">
+		User Name: <span sec:authentication="name"></span> <br> Roles: <span
+			sec:authentication="principal.authorities"></span> <br> <br>
+		<div>
+			<form action="#" th:action="@{/logout}" method="post">
+				<input type="submit" value="Logout" />
+			</form>
+		</div>
+		
+		<div>
+		<h1><a th:href="@{/NewDiscussion}">Start a new discussion</a></h1>
+		<h1><a th:href="@{/discussions}">Watch previous discussions</a></h1>
+		</div>
+	</div>
+	
+</body>
+</html>

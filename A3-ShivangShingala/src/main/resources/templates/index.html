@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+</head>
+<link rel="stylesheet" href="CSS/css.css">
+<body>
+	<h1>Welcome to the employee's internal discussion forum!</h1>
+	<h2>
+		<a th:href="@{/home}">Home Page (You must work for this company in order to access this!)</a>
+	</h2>
+
+	<h2>
+		<a th:href="@{/register}">Employee Registration Page</a>
+	</h2>
+</body>
+</html>

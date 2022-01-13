@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+
+h3{
+	background-image:url("/images/warning.jpg");
+	color: white;
+}
+
+h2{
+	font-weight: 1100;
+	color: white;
+	text-align:center;
+}
+
+h1{
+	background-image: url("/images/yo.jpg");
+	font-size: 100px;
+	font-weight: 1000;
+	text-align: center;
+}
+
+.denied{
+	background-image: url("/images/warning.jpg");
+	font-size: x-large;
+	font-weight: 1000;
+}
+
