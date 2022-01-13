@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Show reviews</title>
+</head>
+<body>
+<h2>All Items:</h2>
+	<table>
+		<tr>
+
+			<th>ID</th>
+			<th>Name</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Review</th>
+		</tr>
+		<tr th:each="i : ${reviews}" th:object="${i}">
+
+			<td th:text="*{id}"></td>
+			<td th:text="*{name}"></td>
+			<td th:text="*{datee}"></td>
+			<td th:text="*{timee}"></td>
+			<td th:text="*{review}"></td>
+		</tr>
+	</table>
+	<a th:href="@{/insert}">Insert new Review</a>
+</body>
+</html>
